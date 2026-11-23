@@ -1,0 +1,11 @@
+{
+  "title": "STTK Back-Office",
+  "description": "Back-office STTK — Station thermale de Korbous",
+  "language": "fr",
+  "icons": {
+    "icon": "/favicon.png"
+  },
+  "robots": {
+    "index": false
+  }
+}
