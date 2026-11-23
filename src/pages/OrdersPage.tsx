@@ -155,9 +155,11 @@ function OrderDetail({
               Enregistrer paiement
             </Button>
           )}
-          <Button variant="danger" disabled={busy} onClick={cancelOrder}>
-            Annuler / rembourser
-          </Button>
+          {!["cancelled", "refunded", "expired", "failed"].includes(data.status) && (
+            <Button variant="danger" disabled={busy} onClick={cancelOrder}>
+              Annuler / rembourser
+            </Button>
+          )}
         </div>
       </div>
       <div className="detail-grid">
