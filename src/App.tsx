@@ -5,8 +5,8 @@ import OrdersPage from "./pages/OrdersPage";
 import CataloguePage from "./pages/CataloguePage";
 import TreatmentsPage from "./pages/TreatmentsPage";
 import AvailabilityPage from "./pages/AvailabilityPage";
-import PricingPage from "./pages/PricingPage";
-import PromosPage from "./pages/PromosPage";
+// import PricingPage from "./pages/PricingPage";
+// import PromosPage from "./pages/PromosPage";
 import PartnersPage from "./pages/PartnersPage";
 import UsersPage from "./pages/UsersPage";
 import OfflinePage from "./pages/OfflinePage";
@@ -54,8 +54,9 @@ export default function App() {
     catalogue: <CataloguePage role={role} />,
     treatments: <TreatmentsPage role={role} />,
     availability: <AvailabilityPage role={role} />,
-    pricing: <PricingPage />,
-    promos: <PromosPage />,
+    // Hidden for now with the sidebar entries
+    pricing: <div className="empty-note muted">Tarifs & grilles — bientôt disponible.</div>,
+    promos: <div className="empty-note muted">Codes promo — bientôt disponible.</div>,
     partners: <PartnersPage role={role} />,
     users: role === "admin" ? <UsersPage /> : <div className="error-note">Accès réservé aux administrateurs.</div>,
     offline: <OfflinePage />,

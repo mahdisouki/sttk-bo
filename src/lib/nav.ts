@@ -6,8 +6,9 @@ export const nav: { id: View; label: string; icon: string; admin?: boolean }[] =
   { id: "catalogue", label: "Catalogue (bons)", icon: "ticket" },
   { id: "treatments", label: "Nos soins", icon: "care" },
   { id: "availability", label: "Disponibilités", icon: "calendar" },
-  { id: "pricing", label: "Tarifs & grilles", icon: "tag" },
-  { id: "promos", label: "Codes promo", icon: "percent" },
+  // Hidden for now — re-enable when pricing grids / promos are ready
+  // { id: "pricing", label: "Tarifs & grilles", icon: "tag" },
+  // { id: "promos", label: "Codes promo", icon: "percent" },
   { id: "partners", label: "Partenaires", icon: "building" },
   { id: "users", label: "Utilisateurs", icon: "users", admin: true },
   { id: "offline", label: "Station / hors-ligne", icon: "cloud", admin: true },
