@@ -14,7 +14,6 @@ build
 .tmp-*
 .plugins
 .opencode-skills
-.figma/design-context
 AGENTS.md
 CLAUDE.md
 .mise.toml
