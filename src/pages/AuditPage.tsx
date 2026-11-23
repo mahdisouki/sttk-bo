@@ -17,11 +17,18 @@ export default function AuditPage() {
   if (loading) return <PageSkeleton />;
   if (error) return <div className="error-note">{error}</div>;
   const rows = data || [];
+  function userLabel(row: any) {
+    if (row.userEmail) return row.userEmail;
+    if (row.userName) return row.userName;
+    if (row.userId && typeof row.userId === "object" && row.userId.email) return row.userId.email;
+    if (row.userId) return String(row.userId).slice(-6);
+    return "Système";
+  }
   return (
     <ListScreen
       columns={["UTILISATEUR", "ACTION", "ENTITÉ", "DATE ET HEURE", ""]}
       rows={rows.map((r: any) => [
-        <b>{r.userId ? String(r.userId).slice(-6) : "Système"}</b>,
+        <b>{userLabel(r)}</b>,
         <code className="action-code">{r.action}</code>,
         `${r.entity}${r.entityId ? ` · ${r.entityId}` : ""}`,
         formatDateTime(r.at),
